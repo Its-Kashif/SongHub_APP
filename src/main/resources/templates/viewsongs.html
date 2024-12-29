@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="viewsongs.css"/>
+</head>
+<body>
+ <div class="song-cards">
+  <div th:each="song : ${songs}" class="card">
+    <div class="song-info">
+      <h2 th:text="${song.name}">Song Name</h2>
+      <p th:text="${song.artist}">Artist Name</p>
+      <p th:text="${song.genre}">Genre</p>
+    </div>
+    <div class="audio-controls">
+      <audio controls>
+        <source th:src="${song.link}" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="Stylesheet" href="registration.css" />
+</head>
+<body>
+
+	<h1>Registration Form</h1>
+	<p>Please fill out this form with the required information</p>
+	<form action="/register" method="post">
+		<fieldset>
+			<label for="name">Enter Your User Name: <input
+				id="name" name="name" type="text" required /></label> <label
+				for="email">Enter Your Email: <input id="email"
+				name="email" type="email" required /></label> <label
+				for="new-password">Create Password: <input
+				id="new-password" name="password" type="password"
+				 required /></label>
+		</fieldset>
+		<fieldset>
+			<legend>Account type (required)</legend>
+			<label for="personal-account"><input
+				id="personal-account" type="radio" name="role" class="inline"
+				checked  value="admin"/> Admin</label> <label for="business-account"><input
+				id="business-account" type="radio" name="role" class="inline" value="cusotmer" />
+				Customer</label>
+		</fieldset>
+		<fieldset>
+			<label for="gender-type">Choose your Gender:</label>
+			<label for="male"><input
+				id="male" type="radio" name="gender" class="inline"
+				 value="male" checked/> Male</label> <label for="female">
+				<input id="female" type="radio" name="gender"
+				class="inline" value="female" /> Female
+			</label> <label for="other"> <input id="other"
+				type="radio" name="gender" class="inline" value="other" />
+				Other
+			</label> <label for="age">Input your age (years): <input
+				id="age" type="number" name="age" min="12" max="120" /></label> 
+				<label for="referrer" >How did you hear about us? <select
+				id="referrer" name="referrer">
+					<option value="">(select one)</option>
+					<option value="1">Instagram</option>
+					<option value="2">Facebook</option>
+					<option value="3">Youtube</option>
+					<option value="4">Other</option>
+			</select>
+			</label> <label for="address">Address: <textarea
+					id="address" name="address" rows="3" cols="30"
+					placeholder="Bangaluru, India"></textarea>
+			</label>
+		</fieldset>
+		<label for="terms-and-conditions"> <input class="inline"
+			id="terms-and-conditions" type="checkbox" required
+			name="terms-and-conditions" /> I accept the <a href="...">terms
+				and conditions</a>
+		</label> <input type="submit" value="Submit" />
+	</form>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="customer.css" />
+</head>
+<body>
+
+    
+
+
+
+
+	<div th:unless="${isPremium}" class="non-premium">
+	    
+	    <div class="heading">
+			<div class="heading-1">
+				<h1>SongHub</h1>
+				<p>
+					<i>Let's explore the music world!</i>
+				</p>
+			</div>
+			<nav>
+				<form action="pay">
+					<input type="submit" value="GET PREMIUM" />
+				</form>
+				<form action="logout">
+					<input type="submit" value="LOGOUT" />
+				</form>
+			</nav>
+		</div>
+	   
+		<div class="song-cards">
+			<div th:each="song : ${songs}" class="card">
+				<div class="song-info">
+					<h2 th:text="${song.name}">Song Name</h2>
+					<p th:text="${song.artist}">Artist Name</p>
+					<p th:text="${song.genre}">Genre</p>
+				</div>
+				<div class="audio-controls">
+					<a href="/pay">Get Subscription</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div th:if="${isPremium}" class="premium">
+	
+	<div class="heading">
+			<div class="heading-1">
+				<h1>SongHub</h1>
+				<p>
+					<i>Let's explore the music world!</i>
+				</p>
+			</div>
+			<nav>
+				
+				<form action="logout">
+					<input type="submit" value="LOGOUT" />
+				</form>
+			</nav>
+		</div>
+	
+	<div class="song-cards">
+			<div th:each="song : ${songs}" class="card">
+				<div class="song-info">
+					<h2 th:text="${song.name}">Song Name</h2>
+					<p th:text="${song.artist}">Artist Name</p>
+					<p th:text="${song.genre}">Genre</p>
+				</div>
+				<div class="audio-controls">
+					<audio controls>
+							<source th:src="${song.link}" type="audio/mpeg" />
+					</audio>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

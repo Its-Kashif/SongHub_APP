@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+
+*{
+	padding:0;
+	margin:0;
+	
+}
+body{
+	background-color:#1b1b32;
+	height:90vh;
+	flex-wrap:wrap;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+ }
+    .button-box{
+    
+    max-width:440px;
+    min-width:300px;
+    display:flex;
+    flex-wrap:wrap;
+	justify-content:center;
+	gap:20px
+    }
+    
+
+    input[type="submit"]{
+    width:200px;
+    height:100px;
+    border-radius:30px;
+    cursor:pointer;
+    }
+    
+
+    input[type="submit"]:hover {
+      background-color:#0a0a23;
+      color:#ffffff;
+    }
